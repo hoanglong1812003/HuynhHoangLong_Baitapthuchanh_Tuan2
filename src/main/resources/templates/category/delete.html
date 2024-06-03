@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xóa thể loại</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Xóa thể loại</h1>
+    <p>Bạn có chắc chắn muốn xóa thể loại <strong th:text="${category.name}"></strong>?</p>
+    <form th:action="@{/categories/delete}" th:object="${category}" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <a href="/categories" class="btn btn-secondary mt-3">Back to List</a>
+</div>
+</body>
+</html>
